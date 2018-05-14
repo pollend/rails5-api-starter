@@ -1,6 +1,6 @@
 ## Rails 5 API starter
 
-<b style='color: orange; font-size: 14pt;'>Rails 5 API starter</b> is a boilerplate which helps you build fast, secure and efficient API for applications. Template based on automatically generated structure of directory and settings which are default delivered by --api switch. Additional to settings are added and initially configure useful Gems, which are often used in Rails stack application.
+<b style='color: orange; font-size: 14pt;'>Rails 5 API starter</b> is a boilerplate which helps you build a fast, secure and efficient API for applications. Includes commonly used template structures generally delivered by the --api switch. Additionally, settings are added to configure useful Gems commonly found in Rails applications.
 
 <p align="center">
 <img src="https://s3-eu-west-1.amazonaws.com/hawatel-github/rails5-api-starter/main.png">
@@ -54,7 +54,7 @@ $ docker-compose run web rails db:migrate
 
 ### Getting Started
 
-To start the server you only need to run the following magic command: 
+To start the server, run the following magic command: 
 
 ```
 $ docker-compose up
@@ -62,7 +62,8 @@ $ docker-compose up
 
 #### Rename project
 
-It is only necessary from the perspective of the framework to change the application name in config/application.rb file.
+The only recommended code change to get started is to give your project a name.
+Change the `HawatelApi5Starterkit` line in config/application.rb to match the name of your application.
 
 ```
 ...
@@ -85,7 +86,7 @@ end
 
 #### Update Gemset 
 
-To avoid install gems from scratch in each time when Gemfile will be updated, boilerplate has implemented persistent, cross-container dedicated volume for gems. 
+To avoid installing gems from scratch in each time when Gemfile will be updated, boilerplate has implemented persistent, cross-container dedicated volume for gems. 
 Now in case when new entry to Gemfile is added, just run below command to update state: 
 
 ```
