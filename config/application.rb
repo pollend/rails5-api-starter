@@ -16,7 +16,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module HawatelApi5Starterkit
+module Affiliated
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -28,6 +28,13 @@ module HawatelApi5Starterkit
     config.api_only = true
 
     # Use Rack Attack
-    config.middleware.use Rack::Attack
+    #config.middleware.use Rack::Attack
+
+    ActionDispatch::Session::CacheStore
+
+    # Rails.application.config.middleware.use OmniAuth::Builder do
+    #   provider :developer unless Rails.env.production?
+    #   provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
+    # end
   end
 end

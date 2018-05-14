@@ -1,6 +1,6 @@
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
-require 'factory_girl'
+require 'factory_bot'
 
 
 RspecApiDocumentation.configure do |config|

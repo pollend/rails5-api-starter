@@ -47,6 +47,7 @@ Boilerplate based on Docker container. To start using them, first, we have to ma
 $ git git@github.com:Hawatel/rails5-api-starter.git
 $ docker-compose build
 $ docker-compose run web bundle
+$ docker-compose run web yarn install
 $ docker-compose run web rails db:create
 $ docker-compose run web rails db:migrate
 ```

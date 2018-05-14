@@ -5,7 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
-100.times do |number|
-  User.create(:email => "test_#{number}@example.com", :password => 'examplPass123', :password_confirmation => 'examplPass123')
+if Rails.env.development?
+  @universities = Array.new(10){University.create({name: Faker::University.unique.name })}
+  @tags = Array.new(40){Tag.create({name: Faker::Name.unique.first_name   })}
+
+  @chapters = Array.new(100){
+    Chapter.create({name: Faker::University.greek_organization, university: @universities.sample })
+  }
+
+
+
 end

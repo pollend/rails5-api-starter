@@ -4,7 +4,7 @@ require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'devise'
-require 'factory_girl_rails'
+require 'support/factory_bot'
 require 'simplecov'
 SimpleCov.start
 
@@ -63,6 +63,6 @@ RSpec.configure do |config|
 
   # Devise
   config.include Devise::TestHelpers, type: :controller
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
 end
